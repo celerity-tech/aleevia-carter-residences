@@ -49,7 +49,7 @@ If you don't know the answer to something, say so clearly. Don't guess or make a
 
 ## Package Management
 
-Always use pmpm as the preferred package manager for installing dependencies and running scripts.
+Always use bun as the preferred package manager for installing dependencies and running scripts.
 
 Never use npm, npx, yarn, or other package managers unless explicitly requested by the user or required by project constraints.
 

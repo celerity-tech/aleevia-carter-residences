@@ -11,12 +11,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 Before making changes, read and follow:
 
 - `.claude/rules/development-standards.md`
-- `.claude/rules/frontend-development.md`
 
 ## Skills
 
-Project-specific skills are located in:
+Project-specific Claude Code skills are stored in:
 
 - `.claude/skills`
 
-Use the relevant skill when the task matches the skill description.
+Use the relevant skill when the task matches its description frontmatter.

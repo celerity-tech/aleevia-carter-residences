@@ -2,221 +2,166 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowDown } from "lucide-react";
-import Floating, { FloatingElement } from "@/components/fancy/image/parallax-floating";
+import { Star } from "lucide-react";
 
-function scrollToResidences(e: React.MouseEvent<HTMLAnchorElement>) {
-  e.preventDefault();
-  const target = document.getElementById("residences");
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-}
+const RATING_VALUE = 4.9;
+const RATING_COUNT = 127;
+const RESERVED_PERCENT = 65;
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-svh w-full flex items-center justify-center overflow-hidden bg-white">
-      {/* Floating Images Layer — hidden on small mobile, progressively shown */}
-      <Floating
-        className="absolute inset-0 z-0 hidden md:block"
-        sensitivity={1}
-        easingFactor={0.04}
-      >
-        {/* Main building — large, top-right */}
-        <FloatingElement
-          depth={1}
-          className="top-[4%] right-[4%]"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.2 }}
-            className="relative w-[280px] h-[370px] lg:w-[360px] lg:h-[470px] xl:w-[400px] xl:h-[520px] shadow-2xl shadow-zinc-300/50"
-          >
-            <Image
-              src="/assets/hero-exterior.jpg"
-              alt="Aleevia Carter Residences — Architectural exterior"
-              width={800}
-              height={1040}
-              className="w-full h-full object-cover object-center"
-              priority
-            />
-          </motion.div>
-        </FloatingElement>
+    <section className="relative w-full bg-white pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+      <div className="main-container">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left — Editorial copy */}
+          <div className="lg:col-span-5 lg:pr-4">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-[0.7rem] tracking-[0.3em] uppercase text-muted-foreground font-medium mb-6"
+            >
+              Premium Residences · Pasay City
+            </motion.p>
 
-        {/* Pool deck — medium, bottom-left */}
-        <FloatingElement
-          depth={2.5}
-          className="bottom-[10%] left-[5%]"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="relative w-[240px] h-[165px] lg:w-[300px] lg:h-[200px] shadow-xl shadow-zinc-300/40"
-          >
-            <Image
-              src="/assets/amenities/pool-deck.png"
-              alt="Pool deck with panoramic views"
-              width={600}
-              height={400}
-              className="w-full h-full object-cover object-center"
-            />
-          </motion.div>
-        </FloatingElement>
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="font-heading text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[3.75rem] xl:text-7xl font-semibold tracking-tight text-foreground leading-[1.02]"
+            >
+              Pasay City will soon
+              <br />
+              be home to
+              <br />
+              <span className="font-normal italic text-muted-foreground">
+                Aleevia Carter.
+              </span>
+            </motion.h1>
 
-        {/* Lounge — smaller, top-left */}
-        <FloatingElement
-          depth={3}
-          className="top-[8%] left-[6%]"
-        >
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.7 }}
-            className="relative w-[200px] h-[145px] lg:w-[250px] lg:h-[175px] shadow-xl shadow-zinc-300/40"
-          >
-            <Image
-              src="/assets/amenities/fitness-center.png"
-              alt="Curated lounge area"
-              width={500}
-              height={350}
-              className="w-full h-full object-cover object-center"
-            />
-          </motion.div>
-        </FloatingElement>
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.35 }}
+              className="mt-8 text-sm md:text-base text-muted-foreground leading-relaxed max-w-md"
+            >
+              A new flagship residence where architectural restraint meets
+              everyday ease — minutes from the bay, the business district, and
+              the international gateway.
+            </motion.p>
 
-        {/* Lobby — small accent, bottom-right */}
-        <FloatingElement
-          depth={1.5}
-          className="bottom-[12%] right-[8%]"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.9 }}
-            className="relative w-[210px] h-[155px] lg:w-[260px] lg:h-[185px] shadow-xl shadow-zinc-300/40"
-          >
-            <Image
-              src="/assets/interior/unit-7/living-room.png"
-              alt="Grand lobby entrance"
-              width={520}
-              height={370}
-              className="w-full h-full object-cover object-center"
-            />
-          </motion.div>
-        </FloatingElement>
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="mt-10 flex items-center gap-8"
+            >
+              <a
+                href="#contact"
+                className="text-sm tracking-[0.05em] text-foreground border-b border-foreground pb-1 hover:opacity-60 transition-opacity"
+              >
+                Register now
+              </a>
+              <a
+                href="#residences"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Explore residences
+              </a>
+            </motion.div>
+          </div>
 
-        {/* Reception — small, mid-left area */}
-        <FloatingElement
-          depth={2}
-          className="top-[45%] left-[2%] -translate-y-1/2"
-        >
+          {/* Right — Main image + floating cards */}
           <motion.div
-            initial={{ opacity: 0, x: -15 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 1.1 }}
-            className="relative w-[160px] h-[215px] lg:w-[190px] lg:h-[255px] shadow-xl shadow-zinc-300/40"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.9, delay: 0.3 }}
+            className="lg:col-span-7 relative"
           >
-            <Image
-              src="/assets/interior/reception.png"
-              alt="Warm interior reception"
-              width={380}
-              height={510}
-              className="w-full h-full object-cover object-center"
-            />
-          </motion.div>
-        </FloatingElement>
-      </Floating>
+            <div className="relative aspect-4/5 w-full bg-zinc-100">
+              <Image
+                src="/assets/hero-exterior.jpg"
+                alt="Aleevia Carter Residences — featured interior"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover"
+                priority
+              />
+            </div>
 
-      {/* Mobile: Static image collage behind text — visible only on small screens */}
-      <div className="absolute inset-0 z-0 md:hidden">
-        <div className="absolute top-[6%] right-[4%] w-[140px] h-[190px] shadow-lg shadow-zinc-200/50">
-          <Image
-            src="/assets/hero-exterior.jpg"
-            alt="Aleevia Carter Residences"
-            width={280}
-            height={380}
-            className="w-full h-full object-cover"
-            priority
-          />
+            {/* Floating card — Project status */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="hidden sm:block absolute -left-4 lg:-left-10 top-10 lg:top-16 w-56 lg:w-64 bg-white border border-zinc-200/80 shadow-xl shadow-zinc-300/30 p-5"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <p className="text-[0.6rem] tracking-[0.2em] uppercase text-muted-foreground font-medium">
+                  Project Status
+                </p>
+                <span className="flex items-center gap-1.5 text-[0.6rem] tracking-wider uppercase text-emerald-600 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  Live
+                </span>
+              </div>
+              <p className="font-heading text-2xl font-semibold text-foreground leading-tight">
+                Phase II
+              </p>
+              <p className="text-xs text-muted-foreground mt-1 mb-4">
+                Now selling · Limited inventory
+              </p>
+              <div className="space-y-1.5">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-[0.65rem] tracking-wider uppercase text-muted-foreground">
+                    Reserved
+                  </span>
+                  <span className="text-xs font-semibold text-foreground tabular-nums">
+                    {RESERVED_PERCENT}%
+                  </span>
+                </div>
+                <div className="w-full h-1 bg-zinc-100">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${RESERVED_PERCENT}%` }}
+                    transition={{ duration: 1.1, delay: 1, ease: "easeOut" }}
+                    className="h-full bg-foreground"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating card — Resident reviews */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="hidden sm:block absolute -right-4 lg:-right-8 bottom-10 lg:bottom-14 w-56 lg:w-60 bg-white border border-zinc-200/80 shadow-xl shadow-zinc-300/30 p-5"
+            >
+              <p className="text-[0.6rem] tracking-[0.2em] uppercase text-muted-foreground font-medium mb-3">
+                Resident Reviews
+              </p>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="font-heading text-3xl font-semibold text-foreground tabular-nums">
+                  {RATING_VALUE.toFixed(1)}
+                </span>
+                <span className="text-xs text-muted-foreground">/ 5.0</span>
+              </div>
+              <div className="flex items-center gap-0.5 mb-3" aria-label={`Rated ${RATING_VALUE} out of 5`}>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-3.5 h-3.5 fill-foreground text-foreground"
+                    aria-hidden
+                  />
+                ))}
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Based on {RATING_COUNT} verified resident surveys.
+              </p>
+            </motion.div>
+          </motion.div>
         </div>
-        <div className="absolute bottom-[12%] left-[4%] w-[120px] h-[85px] shadow-lg shadow-zinc-200/50">
-          <Image
-            src="/assets/amenities/pool-deck.png"
-            alt="Pool deck"
-            width={240}
-            height={170}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute top-[12%] left-[5%] w-[100px] h-[72px] shadow-lg shadow-zinc-200/50">
-          <Image
-            src="/assets/amenities/lounge-area.png"
-            alt="Lounge area"
-            width={200}
-            height={144}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute bottom-[18%] right-[6%] w-[110px] h-[80px] shadow-lg shadow-zinc-200/50">
-          <Image
-            src="/assets/amenities/lobby-entrance.png"
-            alt="Lobby entrance"
-            width={220}
-            height={160}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-      {/* Center Text Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 sm:px-8 max-w-3xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-[0.65rem] sm:text-[0.7rem] tracking-[0.3em] uppercase text-muted-foreground font-medium mb-6 sm:mb-8"
-        >
-          Premium Residences · Pasay City
-        </motion.p>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-heading text-[2.5rem] sm:text-5xl md:text-6xl xl:text-7xl font-semibold tracking-tight text-foreground leading-[1.08]"
-        >
-          Living, without
-          <br />
-          <span className="text-muted-foreground font-normal italic">
-            boundaries.
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-md"
-        >
-          A new standard for easy, sophisticated living — where every detail is
-          intentional and every space is designed for you.
-        </motion.p>
-
-        <motion.a
-          href="#residences"
-          onClick={scrollToResidences}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="inline-flex items-center gap-3 mt-10 sm:mt-12 text-sm tracking-[0.15em] uppercase text-foreground font-medium group"
-        >
-          Explore Residences
-          <span className="inline-flex items-center justify-center w-11 h-11 border border-zinc-300 transition-all duration-300 group-hover:bg-foreground group-hover:text-white group-hover:border-foreground">
-            <ArrowDown className="w-4 h-4" />
-          </span>
-        </motion.a>
       </div>
     </section>
   );

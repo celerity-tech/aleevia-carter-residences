@@ -36,7 +36,7 @@ export function Footer() {
             </h3>
           </div>
           <a
-            href="#contact"
+            href="/contacts"
             className="inline-flex items-center justify-center gap-3 bg-white text-zinc-950 w-full sm:w-auto px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-zinc-200 transition-colors self-start lg:self-auto"
           >
             Schedule a Viewing

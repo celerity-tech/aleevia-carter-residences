@@ -38,7 +38,7 @@ const NAV_LINKS: NavLink[] = [
     }
   },
   { label: "Projects", href: "/#gallery" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Blog", href: "/#blog" },
 ];
 
 export function Header() {
@@ -129,7 +129,7 @@ export function Header() {
               </div>
             ))}
             <a
-              href="/#contact"
+              href="/contacts"
               className="text-[0.75rem] tracking-[0.14em] uppercase transition-all duration-400 px-5 lg:px-6 py-2.5 border border-foreground/20 text-foreground hover:bg-foreground hover:text-white hover:border-foreground"
             >
               Schedule Viewing

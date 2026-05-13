@@ -167,7 +167,7 @@ export function PagIbigCalculator() {
 
               <div className="pt-8 border-t border-white/10">
                 <a
-                  href="/#contact"
+                  href="/contacts"
                   className="inline-block border border-white text-white px-8 py-4 text-xs font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-foreground transition-colors duration-400"
                 >
                   Inquire Now

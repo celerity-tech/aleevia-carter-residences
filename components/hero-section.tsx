@@ -57,7 +57,7 @@ export function HeroSection() {
               className="mt-10 flex items-center gap-8"
             >
               <a
-                href="#contact"
+                href="/contacts"
                 className="text-sm tracking-[0.05em] text-foreground border-b border-foreground pb-1 hover:opacity-60 transition-opacity"
               >
                 Register now

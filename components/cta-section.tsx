@@ -55,7 +55,7 @@ export function CtaSection() {
           className="mt-10 sm:mt-14 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center w-full sm:w-auto"
         >
           <a
-            href="#contact"
+            href="/contacts"
             className="inline-flex items-center justify-center gap-3 bg-zinc-900 text-white w-full sm:w-auto px-8 py-4 text-sm font-medium tracking-wide hover:bg-zinc-800 transition-colors"
           >
             Schedule a Viewing

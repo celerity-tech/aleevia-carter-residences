@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { MessageCircle, X, Send, Sparkles, Paperclip } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -159,8 +160,13 @@ export function ConciergeChat() {
                   </p>
                   <div className="bg-white border border-zinc-200 overflow-hidden">
                     <div className="aspect-4/3 bg-zinc-100 relative overflow-hidden">
-                      {/* Decorative image placeholder */}
-                      <div className="absolute inset-0 bg-linear-to-br from-zinc-200 via-zinc-100 to-zinc-200" />
+                      <Image
+                        src="/assets/interior/unit-7/bedroom.png"
+                        alt="Two-Bedroom Loft — bedroom interior"
+                        fill
+                        sizes="(max-width: 640px) 90vw, 320px"
+                        className="object-cover"
+                      />
                     </div>
                     <div className="p-4">
                       <p className="text-[0.6rem] tracking-[0.2em] uppercase text-muted-foreground mb-1">

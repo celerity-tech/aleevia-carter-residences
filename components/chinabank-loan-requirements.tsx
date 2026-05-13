@@ -99,7 +99,7 @@ export function ChinabankLoanRequirements() {
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
-                  href="/#contact"
+                  href="/contacts"
                   className="inline-flex items-center gap-2 bg-foreground text-white px-7 py-3.5 text-xs font-semibold tracking-[0.15em] uppercase hover:bg-foreground/85 transition-colors"
                 >
                   Get Pre-Qualified
@@ -259,7 +259,7 @@ export function ChinabankLoanRequirements() {
                     you through the pre-qualification process.
                   </p>
                   <a
-                    href="/#contact"
+                    href="/contacts"
                     className="inline-flex items-center justify-center gap-2 w-full border border-white text-white px-6 py-3.5 text-xs font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-foreground transition-colors duration-300"
                   >
                     Get Pre-Qualified

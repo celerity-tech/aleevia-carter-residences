@@ -45,8 +45,8 @@ const DIRECT_CONTACT = [
   {
     icon: MapPin,
     label: "Showroom",
-    value: "Aleevia Carter Residences, Quezon City",
-    href: "https://maps.google.com/?q=Quezon+City",
+    value: "Aleevia Carter Residences, Pasay City",
+    href: "https://maps.google.com/?q=Pasay+City",
   },
 ];
 

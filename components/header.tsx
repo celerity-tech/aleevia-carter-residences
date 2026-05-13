@@ -37,7 +37,6 @@ const NAV_LINKS: NavLink[] = [
       ]
     }
   },
-  { label: "Projects", href: "/#gallery" },
   { label: "Blog", href: "/#blog" },
 ];
 
@@ -258,7 +257,7 @@ export function Header() {
                 ))}
               </nav>
               <motion.a
-                href="#contact"
+                href="/contacts"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.4 }}

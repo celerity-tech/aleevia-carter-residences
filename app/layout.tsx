@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { ConciergeChat } from "@/components/concierge-chat";
 
 const montserratHeading = Montserrat({ subsets: ["latin"], variable: "--font-heading" });
 const notoSans = Noto_Sans({ subsets: ["latin"], variable: "--font-sans" });
@@ -67,6 +68,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ConciergeChat />
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ export function PromotionalBar() {
   return (
     <div className="hidden border-b border-border/40 md:block">
       <div className="mx-auto flex h-9 max-w-350 items-center justify-center gap-3 px-10 text-caption uppercase tracking-label text-foreground/80">
-        <span>Call for Availability</span>
+        <span>Questions? Give us a call</span>
         <span aria-hidden>·</span>
         <a
           href="tel:+639083034095"

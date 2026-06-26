@@ -6,34 +6,35 @@ brand
 
 ## Users
 
-High-net-worth buyers considering a multi-decade home purchase. They are not browsing during a commute — they are sitting with the site, often with a partner, comparing it against other deliberate developments they have already toured (Aman, Six Senses, named architect-led residences). They have seen mass-market property portals and dismissed them. They expect the site to read as "this is a serious, considered place" without a hard sell. Their decision horizon is months, not days.
+Renters and the general public considering Aleevia Carter Residences as a place to live. They arrive curious rather than committed: browsing on a phone during downtime, comparing a few options, picturing whether they could see themselves here. The audience is broad and spans ages, so the site cannot assume sharp eyes, fast connections, or familiarity with property jargon.
 
-The site is one of many touchpoints (broker, brochure, in-person tour). It does not need to close. It needs to earn the next conversation.
+Their job is simple: understand what living here is like and, if it appeals, reach out without friction. They are not investors and not signing anything on the site. They want to feel welcomed, not sold to.
 
 ## Product Purpose
 
-Communicate that Carter Residences is a small, deliberate development by named designers (Aleevia Studio and Patrick Carter) on a defined site: an eastern-shore estate of eleven acres with twelve residences, releasing in phases. Success looks like a qualified prospect requesting a private viewing — not lead-form submissions at scale, not "browse all listings."
+Aleevia Carter Residences is the marketing site for a residential development. It exists to turn casual interest into inquiries: communicate what the place feels like to live in, then make it effortless to ask for more. Success is measured in the volume of qualified rental inquiries submitted through the site, so the path from "this looks nice" to "I sent a message" should be short, obvious, and available from anywhere on the page.
 
 ## Brand Personality
 
-Considered. Slow. Lived-in.
+Warm. Welcoming. Human.
 
-Quiet luxury, not flex. The voice of someone who has the keys and is not in a hurry to hand them over. Specific over abstract; named over generic; restrained over decorative. Warmth carried by material and proportion, never by exclamation.
+The voice of a good host, not a salesperson. It invites people in, speaks plainly, and makes the next step feel natural. Inviting over impressive; clear over clever. Confidence comes from making people feel at home, never from flexing.
 
 ## Anti-references
 
-- **Generic SaaS / proptech.** Geometric sans on a gradient hero, hero-metric template, friendly-app voice, Poppins-and-pastels. This is roughly where the current type system lands and is the primary thing to move away from.
-- **Loud crypto / luxury-flex.** Gold-on-black, oversized "INVEST NOW" CTAs, gradient text, opulent excess.
-- (Adjacent risks to watch: AirBnB-style consumer-travel patterns, Zillow-style listings-portal grammar. Neither was explicitly named but both share the SaaS reflex.)
+- **Generic SaaS / proptech.** Gradient hero, geometric sans, friendly-app voice, the hero-metric template, Poppins-and-pastels. Looks like software, not a home.
+- **Listings-portal grammar.** Zillow / Apartments.com density: filter rails, repeated card grids, price tags everywhere, clutter. This site is a feeling, not a database.
+- **Luxury-flex.** Gold-on-black, oversized "INVEST NOW" CTAs, gradient text, opulent excess. Cold and exclusionary; the opposite of welcoming.
+- **Corporate sterile.** Stock-photo handshakes, navy-and-gray palettes, lifeless enterprise templates. No warmth, no life.
 
 ## Design Principles
 
-1. **Restraint is the voice.** Quiet luxury reads as confidence; loudness reads as insecurity. When in doubt, take something out.
-2. **Typography carries the weight.** Display ambition over decorative ornament. The hero should commit to one large, well-cut idea, not stack a kicker over a headline over a subheading over a button cluster.
-3. **Specificity over abstraction.** "Twelve residences. Eleven acres." beats "Premier properties." Real numbers, real names, real materials, real places.
-4. **The site is a slow read.** Generous spacing, long line-heights, no rush. The visitor is in a chair, not a queue.
-5. **Named over generic.** Aleevia Studio and Patrick Carter are credentials. Never strip names for "our team" or "our architect."
+1. **Warmth is the strategy.** Every choice should make a stranger feel invited. If an element reads as cold, corporate, or transactional, soften it or cut it.
+2. **Make it easy to say yes.** The goal is inquiries, so a low-friction way to reach out is never more than a glance away. Reduce steps, reduce jargon, reduce hesitation.
+3. **Show the life, not the listing.** Lead with what living here feels like, not with specs, filters, or price tags. Avoid portal density.
+4. **Plain and human.** Clear, welcoming language over marketing polish. If a sentence could come from any property site, rewrite it.
+5. **Built for everyone.** A broad, age-spanning audience means nothing should require sharp eyes, fast hands, or a fast connection.
 
 ## Accessibility & Inclusion
 
-WCAG 2.1 AA as the floor. Body text at 16px+ (this project uses 17px base for reading comfort). Color contrast verified against the warm-stone background palette. Motion respects `prefers-reduced-motion`. The audience skews older — type and tap targets should not require sharp eyes or precise mouse work.
+WCAG 2.1 AA as the floor, with extra care for an older and broad audience. Comfortable base type size, generous line-height, and large tap targets so nothing requires precise input or sharp eyesight. Verified contrast against the warm background palette. Motion respects `prefers-reduced-motion`. Forms and inquiry flows are fully keyboard-navigable with clear labels and error messages.

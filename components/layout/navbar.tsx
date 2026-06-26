@@ -111,7 +111,7 @@ export function Navbar() {
             href="/contacts"
             className="hidden h-10 items-center border border-foreground/25 px-6 text-caption font-medium uppercase tracking-label text-foreground transition-colors hover:bg-foreground hover:text-background md:inline-flex"
           >
-            Schedule Viewing
+            Book a visit
           </Link>
           <MobileNav />
         </div>
@@ -214,7 +214,7 @@ function MobileNav() {
             onClick={close}
             className="inline-flex h-11 w-full items-center justify-center border border-foreground/25 px-5 text-caption font-medium uppercase tracking-label text-foreground"
           >
-            Schedule Viewing
+            Book a visit
           </Link>
         </div>
       </SheetContent>

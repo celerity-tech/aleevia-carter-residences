@@ -1,19 +1,21 @@
+import { Amenities } from "@/components/sections/amenities";
+import { CtaBand } from "@/components/sections/cta-band";
+import { FinancingIntro } from "@/components/sections/financing-intro";
 import { Hero } from "@/components/sections/hero";
-import { Inquiry } from "@/components/sections/inquiry";
-import { OwnOrRent } from "@/components/sections/own-or-rent";
-import { TheHomes } from "@/components/sections/the-homes";
-import { TheShore } from "@/components/sections/the-shore";
+import { Residences } from "@/components/sections/residences";
+import { Testimonials } from "@/components/sections/testimonials";
 import { Welcome } from "@/components/sections/welcome";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Welcome />
-      <TheHomes />
-      <TheShore />
-      <OwnOrRent />
-      <Inquiry />
-    </main>
+      <Residences />
+      <Amenities />
+      <Testimonials />
+      <FinancingIntro />
+      <CtaBand />
+    </>
   );
 }

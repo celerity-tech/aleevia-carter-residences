@@ -1,70 +1,129 @@
-import { ArrowUpRight } from "lucide-react";
+"use client";
+
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
+import { useRef } from "react";
+
+import { CtaLink } from "@/components/ui/cta-link";
+import { BROCHURE_PATH, PRIMARY_CTA } from "@/lib/site";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const FACTS = [
+  "Seven storeys",
+  "85 residences",
+  "1 & 2-bedroom lofts",
+  "Pasay City",
+];
 
 export function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const reduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "16%"]);
+
   return (
     <section
+      ref={ref}
       aria-labelledby="hero-heading"
-      className="relative isolate flex h-svh w-full overflow-hidden bg-foreground/5"
+      className="relative isolate flex min-h-[640px] w-full items-end overflow-hidden bg-emerald md:h-[calc(100svh-3.25rem)]"
     >
-      <Image
-        src="/assets/hero-exterior.jpg"
-        alt="The homes at Carter Residences, set among trees on the eastern shore."
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover animate-in fade-in duration-[1400ms] ease-out"
-      />
+      <motion.div
+        aria-hidden
+        style={reduceMotion ? undefined : { y: imageY }}
+        className="absolute inset-0 -z-10 scale-110"
+      >
+        <Image
+          src="/assets/interior/unit-7/living-room.png"
+          alt="A warm living and dining space at Aleevia Carter: forest-green feature wall, oak joinery, and soft afternoon light."
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </motion.div>
 
+      {/* Warm scrims: gentle at top for the header, deeper at the base for type. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-foreground/45 via-foreground/10 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-foreground/45 to-transparent"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-foreground/70 via-foreground/22 to-transparent"
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-foreground/85 via-foreground/35 to-transparent"
       />
 
-      <div className="absolute inset-x-6 top-6 z-10 flex items-start justify-between gap-6 md:inset-x-10 md:top-10">
-        <p className="text-caption font-medium uppercase tracking-monogram text-background animate-in fade-in duration-1000 delay-300 fill-mode-both">
-          Carter Residences
-        </p>
-        <p className="hidden text-caption font-medium uppercase tracking-kicker text-background/85 animate-in fade-in duration-1000 delay-500 fill-mode-both sm:block">
-          Now welcoming visitors
-        </p>
-      </div>
+      <div className="main-container relative z-10 pb-12 pt-28 md:pb-20">
+        <div className="max-w-[46rem]">
+          <motion.p
+            initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
+            className="text-caption font-medium uppercase tracking-kicker text-gold"
+          >
+            Pasay City · Now welcoming viewings
+          </motion.p>
 
-      <div className="absolute inset-x-6 bottom-10 z-10 flex flex-col gap-10 md:inset-x-10 md:bottom-14 md:flex-row md:items-end md:justify-between md:gap-16 lg:bottom-16">
-        <div className="max-w-[42rem] animate-in fade-in slide-in-from-bottom-3 duration-1000 delay-700 fill-mode-both">
-          <p className="text-caption font-medium uppercase tracking-kicker text-background/90">
-            Homes on the eastern shore
-          </p>
-          <h1
+          <motion.h1
             id="hero-heading"
-            className="mt-6 font-heading text-h2 font-light leading-[1.02] text-background md:mt-8 md:text-h1 lg:text-display lg:leading-[0.96]"
+            initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: EASE, delay: 0.22 }}
+            className="mt-6 font-heading text-display font-light text-balance text-background"
           >
-            Twelve homes by the water,
-            <br className="hidden md:inline" />
-            {" "}one could be yours.
-          </h1>
-          <p className="mt-6 max-w-[42ch] text-small font-light text-background/85 md:mt-8 md:text-body">
-            A small neighborhood on the eastern shore, designed by Aleevia
-            Studio and Patrick Carter. Come see if one feels like home.
-          </p>
-        </div>
+            Your haven in the{" "}
+            <span className="italic text-gold">heart of the city.</span>
+          </motion.h1>
 
-        <div className="animate-in fade-in slide-in-from-bottom-3 duration-1000 delay-1000 fill-mode-both">
-          <Link
-            href="/contacts"
-            className="group inline-flex h-12 items-center gap-3 border border-background/55 px-7 text-caption font-medium uppercase tracking-label text-background transition-[background-color,color,border-color] duration-300 ease-out hover:border-background hover:bg-background hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-foreground/30 active:translate-y-px"
+          <motion.p
+            initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: EASE, delay: 0.38 }}
+            className="mt-7 max-w-[46ch] text-lead font-light text-background/90"
           >
-            Book a visit
-            <ArrowUpRight
-              aria-hidden
-              className="size-4 transition-transform duration-500 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0 motion-reduce:group-hover:translate-y-0"
-            />
-          </Link>
+            A small Japandi residence on E. Rodriguez Street — one- and
+            two-bedroom loft homes built for a life without limits.
+          </motion.p>
+
+          <motion.div
+            initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: EASE, delay: 0.54 }}
+            className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+          >
+            <CtaLink href={PRIMARY_CTA.href} variant="solid">
+              {PRIMARY_CTA.label}
+            </CtaLink>
+            <CtaLink href={BROCHURE_PATH} variant="outlineLight">
+              View the brochure
+            </CtaLink>
+          </motion.div>
+
+          <motion.ul
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.8 }}
+            className="mt-12 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-background/20 pt-6 text-caption font-medium uppercase tracking-label text-background/80"
+          >
+            {FACTS.map((fact, index) => (
+              <li key={fact} className="flex items-center gap-5">
+                {index > 0 && (
+                  <span aria-hidden className="text-gold">
+                    ·
+                  </span>
+                )}
+                {fact}
+              </li>
+            ))}
+          </motion.ul>
         </div>
       </div>
     </section>

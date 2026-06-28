@@ -6,13 +6,13 @@ brand
 
 ## Users
 
-Renters and the general public considering Aleevia Carter Residences as a place to live. They arrive curious rather than committed: browsing on a phone during downtime, comparing a few options, picturing whether they could see themselves here. The audience is broad and spans ages, so the site cannot assume sharp eyes, fast connections, or familiarity with property jargon.
+People considering Aleevia Carter Residences — a seven-storey residence on E. Rodriguez Street in Pasay City — as a place to live. Most are looking to own one of the one- or two-bedroom loft homes (a limited number are open to rent), helped along by Pag-IBIG or bank financing. They arrive curious rather than committed: browsing on a phone during downtime, comparing a few options, picturing whether they could see themselves here. The audience is broad and spans ages, so the site cannot assume sharp eyes, fast connections, or familiarity with property jargon.
 
-Their job is simple: understand what living here is like and, if it appeals, reach out without friction. They are not investors and not signing anything on the site. They want to feel welcomed, not sold to.
+Their job is simple: understand what living here is like and, if it appeals, reach out without friction. They are not signing anything on the site. They want to feel welcomed, not sold to.
 
 ## Product Purpose
 
-Aleevia Carter Residences is the marketing site for a residential development. It exists to turn casual interest into inquiries: communicate what the place feels like to live in, then make it effortless to ask for more. Success is measured in the volume of qualified rental inquiries submitted through the site, so the path from "this looks nice" to "I sent a message" should be short, obvious, and available from anywhere on the page.
+Aleevia Carter Residences is the marketing site for a boutique residential building in Pasay City, developed by Aleevia Carter Development Corporation. It exists to turn casual interest into inquiries: communicate what the place feels like to live in, then make it effortless to ask for more. Success is measured in the volume of qualified viewing inquiries (a booked tour, a call, a message) submitted through the site, so the path from "this looks nice" to "I booked a viewing" should be short, obvious, and available from anywhere on the page.
 
 ## Brand Personality
 

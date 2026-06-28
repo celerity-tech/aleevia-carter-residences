@@ -1,17 +1,23 @@
 import { Phone } from "lucide-react";
 
+import { CONTACT } from "@/lib/site";
+
 export function PromotionalBar() {
   return (
-    <div className="hidden border-b border-border/40 md:block">
-      <div className="mx-auto flex h-9 max-w-350 items-center justify-center gap-3 px-10 text-caption uppercase tracking-label text-foreground/80">
-        <span>Questions? Give us a call</span>
-        <span aria-hidden>·</span>
+    <div className="hidden bg-emerald text-emerald-foreground md:block">
+      <div className="main-container flex h-9 items-center justify-center gap-3 text-caption tracking-label">
+        <span className="text-emerald-foreground/80">
+          Now welcoming private viewings
+        </span>
+        <span aria-hidden className="text-gold">
+          ·
+        </span>
         <a
-          href="tel:+639083034095"
-          className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+          href={CONTACT.phoneHref}
+          className="inline-flex items-center gap-2 transition-colors hover:text-gold"
         >
           <Phone className="size-3" />
-          +63 908 303 4095
+          {CONTACT.phone}
         </a>
       </div>
     </div>

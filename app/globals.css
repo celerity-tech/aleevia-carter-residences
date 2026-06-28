@@ -25,27 +25,43 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
 
-  /* Terracotta — the one warm voice. Primary actions, links, focus rings.
-     The site's only true color; it appears where the visitor is invited to act. */
+  /* Deep emerald — the one action voice. Primary buttons, links, focus rings.
+     Drawn from the brochure's emerald accent walls; cream text clears WCAG AA. */
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
 
-  /* Warm sand — quiet secondary surfaces. Reads as neutral, never as a brand color. */
+  /* Pale sage — quiet secondary surfaces. Reads as a warm neutral, not a CTA. */
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
 
-  /* Warm stone — subtle hover/active surface for menus and ghost states.
-     shadcn's `accent` role: a muted neutral wash, not the brand accent. */
+  /* Sage-stone — subtle hover/active wash for menus and ghost states.
+     shadcn's `accent` role: a muted neutral, never the brand voice. */
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
 
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-xl: 0px;
-  --radius-2xl: 0px;
-  --radius-3xl: 0px;
-  --radius-4xl: 0px;
+  /* Brass gold — the brochure's logo metal. A rare jewel accent, brightest on
+     the dark sage/emerald surfaces. Never a gold-on-black luxury-flex button. */
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+
+  /* Sage — mid olive brand wash for large-type bands (headings/leads only). */
+  --color-sage: var(--sage);
+  --color-sage-foreground: var(--sage-foreground);
+
+  /* Emerald — deep brand surface for body-bearing dark sections + footer. */
+  --color-emerald: var(--emerald);
+  --color-emerald-foreground: var(--emerald-foreground);
+
+  /* Soft controls, sharp architecture: a whisper of radius on the things a
+     visitor touches (4px controls / 6px panels). Imagery + full-bleed bands
+     stay crisp by simply not applying a rounded utility. */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.625rem;
+  --radius-2xl: 0.75rem;
+  --radius-3xl: 1rem;
+  --radius-4xl: 1.25rem;
 
   /* Type scale — fluid clamp() for display + headings (≥1.333 ratio),
      fixed rem for body + caption. Line-height + letter-spacing are
@@ -67,82 +83,101 @@
   --text-h2: clamp(2.625rem, 5vw + 1.25rem, 4.75rem);
   --text-h2--line-height: 1.06;
   --text-h2--letter-spacing: -0.016em;
-  --text-h1: clamp(3rem, 7vw + 1.25rem, 6.5rem);
-  --text-h1--line-height: 1.02;
+  --text-h1: clamp(2.5rem, 5vw + 1rem, 5.75rem);
+  --text-h1--line-height: 1.04;
   --text-h1--letter-spacing: -0.02em;
-  --text-display: clamp(3.75rem, 10vw + 1rem, 9rem);
-  --text-display--line-height: 0.94;
-  --text-display--letter-spacing: -0.026em;
+  --text-display: clamp(2.75rem, 5.5vw + 1rem, 6rem);
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.022em;
 
   /* Tracking — a small committed set, no arbitrary values in markup. */
   --tracking-label: 0.16em;
   --tracking-kicker: 0.22em;
-  --tracking-monogram: 0.28em;
+  --tracking-monogram: 0.3em;
 
   /* Leading — hero override for serif headlines that want extra air. */
   --leading-hero: 1.04;
 }
 
-/* Light is the committed theme: a renter on a phone in everyday indoor light,
-   relaxed and curious. Warm cream surfaces, one terracotta voice. */
+/* Light is the committed theme: a curious visitor on a phone in everyday indoor
+   light. A warm cream/marble canvas, sage neutrals, one emerald action voice,
+   and a rare brass-gold accent — the Japandi world of the brochure. */
 :root {
-  --background: oklch(0.970 0.008 83);
-  --foreground: oklch(0.255 0.013 55);
-  --card: oklch(0.988 0.006 85);
-  --card-foreground: oklch(0.255 0.013 55);
-  --popover: oklch(0.988 0.006 85);
-  --popover-foreground: oklch(0.255 0.013 55);
+  --background: oklch(0.965 0.012 92);
+  --foreground: oklch(0.255 0.012 140);
+  --card: oklch(0.984 0.008 92);
+  --card-foreground: oklch(0.255 0.012 140);
+  --popover: oklch(0.984 0.008 92);
+  --popover-foreground: oklch(0.255 0.012 140);
 
-  --primary: oklch(0.455 0.120 42);
-  --primary-foreground: oklch(0.985 0.010 85);
+  --primary: oklch(0.42 0.058 162);
+  --primary-foreground: oklch(0.97 0.012 92);
 
-  --secondary: oklch(0.918 0.016 80);
-  --secondary-foreground: oklch(0.295 0.014 58);
+  --secondary: oklch(0.915 0.022 150);
+  --secondary-foreground: oklch(0.3 0.02 150);
 
-  --muted: oklch(0.930 0.013 80);
-  --muted-foreground: oklch(0.450 0.020 62);
+  --muted: oklch(0.925 0.016 132);
+  --muted-foreground: oklch(0.435 0.022 145);
 
-  --accent: oklch(0.916 0.018 78);
-  --accent-foreground: oklch(0.295 0.014 58);
+  --accent: oklch(0.915 0.02 146);
+  --accent-foreground: oklch(0.3 0.02 150);
 
-  --destructive: oklch(0.545 0.170 28);
-  --destructive-foreground: oklch(0.985 0.010 85);
+  --gold: oklch(0.72 0.105 86);
+  --gold-foreground: oklch(0.25 0.03 80);
 
-  --border: oklch(0.870 0.015 76);
-  --input: oklch(0.855 0.016 75);
-  --ring: oklch(0.455 0.120 42);
+  --sage: oklch(0.55 0.046 150);
+  --sage-foreground: oklch(0.97 0.012 92);
 
-  --radius: 0rem;
+  --emerald: oklch(0.34 0.05 165);
+  --emerald-foreground: oklch(0.965 0.012 92);
+
+  --destructive: oklch(0.545 0.17 28);
+  --destructive-foreground: oklch(0.985 0.01 85);
+
+  --border: oklch(0.875 0.014 135);
+  --input: oklch(0.86 0.016 135);
+  --ring: oklch(0.42 0.058 162);
+
+  --radius: 0.375rem;
 }
 
-/* Warm dark: same room after dusk. Warm charcoal, never cool slate.
-   Carried for shadcn parity; light remains the committed default. */
+/* Warm dusk: the same Japandi room after dark. Carried for shadcn parity only;
+   light remains the committed default (no theme toggle ships). */
 .dark {
-  --background: oklch(0.205 0.010 55);
-  --foreground: oklch(0.945 0.010 83);
-  --card: oklch(0.245 0.012 56);
-  --card-foreground: oklch(0.945 0.010 83);
-  --popover: oklch(0.245 0.012 56);
-  --popover-foreground: oklch(0.945 0.010 83);
+  --background: oklch(0.205 0.014 165);
+  --foreground: oklch(0.945 0.012 92);
+  --card: oklch(0.245 0.016 165);
+  --card-foreground: oklch(0.945 0.012 92);
+  --popover: oklch(0.245 0.016 165);
+  --popover-foreground: oklch(0.945 0.012 92);
 
-  --primary: oklch(0.660 0.135 45);
-  --primary-foreground: oklch(0.205 0.010 55);
+  --primary: oklch(0.66 0.07 160);
+  --primary-foreground: oklch(0.18 0.02 165);
 
-  --secondary: oklch(0.290 0.014 58);
-  --secondary-foreground: oklch(0.945 0.010 83);
+  --secondary: oklch(0.3 0.022 150);
+  --secondary-foreground: oklch(0.945 0.012 92);
 
-  --muted: oklch(0.290 0.014 58);
-  --muted-foreground: oklch(0.715 0.018 75);
+  --muted: oklch(0.3 0.018 150);
+  --muted-foreground: oklch(0.72 0.02 140);
 
-  --accent: oklch(0.312 0.016 58);
-  --accent-foreground: oklch(0.945 0.010 83);
+  --accent: oklch(0.32 0.022 150);
+  --accent-foreground: oklch(0.945 0.012 92);
 
-  --destructive: oklch(0.620 0.170 27);
-  --destructive-foreground: oklch(0.965 0.010 85);
+  --gold: oklch(0.78 0.11 86);
+  --gold-foreground: oklch(0.2 0.03 80);
 
-  --border: oklch(0.318 0.014 60);
-  --input: oklch(0.335 0.014 60);
-  --ring: oklch(0.660 0.135 45);
+  --sage: oklch(0.5 0.046 150);
+  --sage-foreground: oklch(0.97 0.012 92);
+
+  --emerald: oklch(0.3 0.05 165);
+  --emerald-foreground: oklch(0.965 0.012 92);
+
+  --destructive: oklch(0.62 0.17 27);
+  --destructive-foreground: oklch(0.965 0.01 85);
+
+  --border: oklch(0.32 0.016 150);
+  --input: oklch(0.34 0.016 150);
+  --ring: oklch(0.66 0.07 160);
 }
 
 @layer base {
@@ -151,7 +186,10 @@
   }
   html {
     @apply font-sans;
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-feature-settings:
+      "kern" 1,
+      "liga" 1,
+      "calt" 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -164,7 +202,11 @@
   h3,
   h4 {
     @apply font-heading;
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "dlig" 1;
+    font-feature-settings:
+      "kern" 1,
+      "liga" 1,
+      "calt" 1,
+      "dlig" 1;
   }
   /* Tabular figures wherever numbers should align. */
   th,
@@ -172,4 +214,64 @@
   time {
     font-variant-numeric: tabular-nums;
   }
+  /* Warm, on-brand text selection. */
+  ::selection {
+    background: var(--sage);
+    color: var(--sage-foreground);
+  }
+  /* Interactive elements get a pointer cursor (Tailwind v4 no longer does this). */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"],
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  /* The single page gutter, used everywhere for consistent rhythm. */
+  .main-container {
+    @apply mx-auto w-full max-w-[87.5rem] px-6 md:px-10 lg:px-12;
+  }
+}
+
+/* Lenis smooth scroll — recommended rules. Disabled for reduced-motion users
+   (the provider never starts Lenis in that case, but these keep native scroll
+   well-behaved regardless). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  /* biome-ignore lint/complexity/noImportantStyles: Lenis requires this to override native smooth-scroll */
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Sage scrollbar to match the canvas. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sage) transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage);
 }

@@ -1,29 +1,35 @@
 ---
 name: Aleevia Carter Residences
-description: Warm, editorial, unhurried marketing site that turns curiosity into rental inquiries.
+description: Warm, Japandi, unhurried marketing site that turns curiosity into viewing inquiries.
 colors:
-  background: "oklch(0.970 0.008 83)"
-  foreground: "oklch(0.255 0.013 55)"
-  primary: "oklch(0.455 0.120 42)"
-  primary-foreground: "oklch(0.985 0.010 85)"
-  secondary: "oklch(0.918 0.016 80)"
-  secondary-foreground: "oklch(0.295 0.014 58)"
-  muted: "oklch(0.930 0.013 80)"
-  muted-foreground: "oklch(0.450 0.020 62)"
-  accent: "oklch(0.916 0.018 78)"
-  accent-foreground: "oklch(0.295 0.014 58)"
-  card: "oklch(0.988 0.006 85)"
-  border: "oklch(0.870 0.015 76)"
-  input: "oklch(0.855 0.016 75)"
-  ring: "oklch(0.455 0.120 42)"
-  destructive: "oklch(0.545 0.170 28)"
+  background: "oklch(0.965 0.012 92)"
+  foreground: "oklch(0.255 0.012 140)"
+  primary: "oklch(0.42 0.058 162)"
+  primary-foreground: "oklch(0.97 0.012 92)"
+  secondary: "oklch(0.915 0.022 150)"
+  secondary-foreground: "oklch(0.3 0.02 150)"
+  muted: "oklch(0.925 0.016 132)"
+  muted-foreground: "oklch(0.435 0.022 145)"
+  accent: "oklch(0.915 0.02 146)"
+  accent-foreground: "oklch(0.3 0.02 150)"
+  gold: "oklch(0.72 0.105 86)"
+  gold-foreground: "oklch(0.25 0.03 80)"
+  sage: "oklch(0.55 0.046 150)"
+  sage-foreground: "oklch(0.97 0.012 92)"
+  emerald: "oklch(0.34 0.05 165)"
+  emerald-foreground: "oklch(0.965 0.012 92)"
+  card: "oklch(0.984 0.008 92)"
+  border: "oklch(0.875 0.014 135)"
+  input: "oklch(0.86 0.016 135)"
+  ring: "oklch(0.42 0.058 162)"
+  destructive: "oklch(0.545 0.17 28)"
 typography:
   display:
     fontFamily: "Spectral, Georgia, serif"
-    fontSize: "clamp(3.75rem, 10vw + 1rem, 9rem)"
+    fontSize: "clamp(3.75rem, 10vw + 1rem, 8.5rem)"
     fontWeight: 300
-    lineHeight: 0.94
-    letterSpacing: "-0.026em"
+    lineHeight: 0.96
+    letterSpacing: "-0.024em"
   headline:
     fontFamily: "Spectral, Georgia, serif"
     fontSize: "clamp(3rem, 7vw + 1.25rem, 6.5rem)"
@@ -48,7 +54,9 @@ typography:
     lineHeight: 1.5
     letterSpacing: "0.16em"
 rounded:
-  none: "0px"
+  control: "0.25rem"
+  panel: "0.375rem"
+  full: "9999px"
 spacing:
   xs: "0.5rem"
   sm: "1rem"
@@ -59,17 +67,17 @@ components:
   button-primary:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.primary-foreground}"
-    rounded: "{rounded.none}"
-    padding: "0 1.5rem"
-    height: "2.5rem"
+    rounded: "{rounded.control}"
+    padding: "0 1.75rem"
+    height: "3rem"
   button-secondary:
     backgroundColor: "{colors.secondary}"
     textColor: "{colors.secondary-foreground}"
-    rounded: "{rounded.none}"
+    rounded: "{rounded.control}"
   button-outline:
     backgroundColor: "{colors.background}"
     textColor: "{colors.foreground}"
-    rounded: "{rounded.none}"
+    rounded: "{rounded.control}"
 ---
 
 # Design System: Aleevia Carter Residences
@@ -78,106 +86,107 @@ components:
 
 **Creative North Star: "The Unhurried Welcome"**
 
-This system feels like being shown around a beautiful home by someone who genuinely wants you to stay. It borrows the calm editorial warmth of Kinfolk and Cereal: generous whitespace, soft warm light, and type that reads like a printed page rather than an app screen. Color is restrained. Warm cream and sand neutrals carry nearly every surface, and a single terracotta voice appears only where the visitor is invited to act. The page breathes; photography and space are the loudest elements, never chrome.
+This system feels like being shown around a beautiful home by someone who genuinely wants you to stay. It is **Japandi** — the calm meeting of Japanese restraint and Scandinavian warmth, drawn directly from the project's brochure: warm wood, organic textures, plaster-soft walls, and a spa-like quiet. Color is committed but never loud. A cream/marble canvas carries the page; **sage green** is the ambient brand voice; a single **deep-emerald** voice marks every place the visitor is invited to act; and a rare **brass-gold** (the brochure's logo metal) appears as a jewel accent, brightest on the dark sage and emerald surfaces.
 
-It is built on shadcn (Tailwind v4, base-ui primitives) with a `taupe` warm-neutral base. The semantic tokens here are the contract: components consume `primary`, `secondary`, `muted`, `accent`, `border`, and friends, and the palette is tuned so the same components read as warm and hospitable rather than cool and corporate.
+It is built on shadcn (Tailwind v4, base-ui primitives). The semantic tokens here are the contract: components consume `primary`, `secondary`, `muted`, `accent`, `border`, and friends, plus three brand tokens — `gold`, `sage`, `emerald` — for the moments the page leans into color.
 
-It explicitly rejects four things, carried from PRODUCT.md: it must not look like generic SaaS / proptech (gradient heroes, geometric-sans-on-gradient, friendly-app voice, hero-metric templates), like a listings portal (filter rails, repeated card grids, price tags, clutter), like luxury-flex (gold-on-black, oversized "INVEST NOW" CTAs, gradient text), or like corporate sterile templates (stock handshakes, navy-and-gray). If a screen reads as software, a database, a flex, or an enterprise template, it has failed.
+It explicitly rejects four things, carried from PRODUCT.md: it must not look like generic SaaS / proptech (gradient heroes, geometric-sans-on-gradient, hero-metric templates), like a listings portal (filter rails, repeated card grids, price tags, clutter), like luxury-flex (gold-on-black, oversized "INVEST NOW" CTAs, gradient text), or like corporate sterile templates (stock handshakes, navy-and-gray). Gold is handled with care precisely so it never tips into luxury-flex: it is a thin accent and a metal on dark green, never a shiny button on black.
 
 **Key Characteristics:**
-- Warm cream surfaces, one rare terracotta voice (restrained strategy)
+- Cream/marble canvas, sage ambient voice, one emerald action voice, rare brass-gold accent
+- Sage- and emerald-drenched bands (footer, "by the numbers", CTA) keep the page from reading as cream monotone
 - Editorial whitespace and an unhurried reading rhythm
-- Spectral serif display paired with Albert Sans body
-- Sharp, frameless edges (zero radius) inherited from the current build
-- Photography and space carry the emotion, not borders or buttons
+- Spectral serif display (light, with italic emphasis) paired with Albert Sans body
+- Uniformly soft corners: 4px on controls (buttons, inputs, chips), 6px on panels and imagery; only full-bleed bands (hero, CTA, footer) run edge-to-edge. No hard 0px corners — that consistency is the warmth.
+- Photography and warm material carry the emotion, not borders or chrome
 
 ## 2. Colors
 
-A warm-neutral palette built on cream and sand, with a single terracotta accent. Values are OKLCH (the project's canonical format); chroma stays low on the neutrals so they read as warm, never muddy.
+A warm-neutral palette built on cream and sage, with an emerald action voice and a brass-gold accent. Values are OKLCH; chroma stays low on the neutrals so they read as warm and calm, never muddy.
 
-### Primary
-- **Terracotta** (`oklch(0.455 0.120 42)`): The only true color in the system. Primary buttons, links, and focus rings (`ring` shares this value). A deep clay tone chosen so cream text clears WCAG AA on it. Appears on under 10% of any screen.
+### Brand
+- **Emerald** (`primary`, `oklch(0.42 0.058 162)`): The action voice. Primary buttons, links, focus rings, and active states. Cream text clears WCAG AA on it. Drawn from the brochure's deep-green accent walls.
+- **Brass gold** (`gold`, `oklch(0.72 0.105 86)`): The brochure's logo metal. A rare jewel accent — kickers on imagery, numerals on dark bands, hairline flourishes, the footer wordmark. Low-contrast on cream by design, so it is reserved for dark sage/emerald surfaces and decorative use, never body text on cream.
+- **Sage** (`sage`, `oklch(0.55 0.046 150)`) and **Emerald** (`emerald`, `oklch(0.34 0.05 165)`): brand surfaces for drenched bands. Sage carries large type only (headings/leads clear ≥3:1); emerald is deep enough for body copy (cream clears AA). The footer and key CTAs live here.
 
 ### Neutral
-- **Cream** (`background`, `oklch(0.970 0.008 83)`): Default page surface. The warm room the content lives in. Never pure white.
-- **Paper** (`card` / `popover`, `oklch(0.988 0.006 85)`): Slightly brighter raised surfaces for menus, sheets, and cards.
-- **Sand** (`secondary`, `oklch(0.918 0.016 80)`): Quiet secondary-button and section-wash surface.
-- **Warm Stone** (`accent`, `oklch(0.916 0.018 78)`): shadcn's `accent` role, the subtle hover/active wash for nav items and ghost buttons. A neutral, not the brand color.
-- **Mist** (`muted`, `oklch(0.930 0.013 80)`) with **Slate-Warm** text (`muted-foreground`, `oklch(0.450 0.020 62)`): captions, metadata, secondary copy. Foreground tuned to clear AA on cream.
-- **Ink** (`foreground`, `oklch(0.255 0.013 55)`): Body and heading text. Warm near-black, tinted toward the palette, never `#000`.
+- **Cream/Marble** (`background`, `oklch(0.965 0.012 92)`): Default page surface. Warm, never pure white.
+- **Paper** (`card` / `popover`, `oklch(0.984 0.008 92)`): Slightly brighter raised surfaces.
+- **Pale sage** (`secondary`, `oklch(0.915 0.022 150)`): Quiet section washes and secondary buttons.
+- **Sage-stone** (`accent`, `oklch(0.915 0.02 146)`): shadcn's `accent` hover/active wash. A neutral, not the brand voice.
+- **Mist** (`muted`) with **Slate-sage** text (`muted-foreground`, `oklch(0.435 0.022 145)`): captions and secondary copy, tuned to clear AA on cream.
+- **Ink** (`foreground`, `oklch(0.255 0.012 140)`): Body and heading text. Warm near-black, faintly green-tinted, never `#000`.
 
 ### Named Rules
-**The One Warm Voice Rule.** Exactly one accent color exists (terracotta), and it appears only where the visitor is invited to act: primary CTA, links, focus. If terracotta is carrying decoration instead of action, remove it. Its rarity is what makes a call to action feel like an open door.
+**The One Action Voice Rule.** Emerald (`primary`) marks where the visitor acts: the inquiry CTA, links, and focus. Gold decorates; emerald acts. Don't repaint decoration emerald or buttons gold.
 
-**The Neutral-Accent Rule.** shadcn's `accent` token is a warm-stone hover wash, not the brand color. Never repaint `accent` terracotta to "add color"; that breaks every menu and ghost-button hover state and dilutes the one voice.
+**The Gold-on-Dark Rule.** Gold is a metal: it sings on emerald and sage, and whispers (or disappears) on cream. Use it for accents and on dark surfaces, never for body text on the cream canvas.
+
+**The Neutral-Accent Rule.** shadcn's `accent` is a sage-stone hover wash, not a brand color. Never repaint it emerald or gold.
 
 ## 3. Typography
 
 **Display Font:** Spectral (with Georgia, serif fallback)
 **Body Font:** Albert Sans (with system-ui, sans-serif fallback)
 
-**Character:** Spectral gives the warmth and editorial confidence of a printed magazine; Albert Sans keeps long reading comfortable and plain-spoken. The pairing should feel hospitable and human, never corporate.
+**Character:** Spectral gives the warmth and editorial confidence of a printed page; its light weights and italics echo the brochure's elegant serif. Albert Sans keeps long reading comfortable and plain-spoken. Italic Spectral carries emphasis words ("…in the *heart of the city*", "Living, without *boundaries*"), exactly as the brochure does.
 
 ### Hierarchy
-- **Display** (300, `clamp(3.75rem, 10vw + 1rem, 9rem)`, lh 0.94): Hero statement. One large, well-cut idea per view.
-- **Headline** (300, `clamp(3rem, 7vw + 1.25rem, 6.5rem)`, lh 1.02): Major section openers.
-- **Title** (400, `clamp(2rem, 2.5vw + 1.25rem, 2.75rem)`, lh 1.12): Sub-section structure.
-- **Body** (400, `1.0625rem` / 17px, lh 1.65): The unhurried read. Sized large for an age-spanning audience; cap lines at 65-75ch.
-- **Label** (500, `0.8125rem`, tracking 0.16em): Buttons, eyebrows, metadata. Uppercase with measured tracking, not aggressive SaaS tracking.
+- **Display** (300, `clamp(3.75rem, 10vw + 1rem, 8.5rem)`, lh 0.96): Hero statement.
+- **Headline / h1** (300, up to `6.5rem`, lh 1.02): Page openers.
+- **h2** (300, up to `4.75rem`): Major section openers.
+- **Title / h3** (400, up to `2.75rem`): Sub-section structure.
+- **Body** (400, `1.0625rem` / 17px, lh 1.65): The unhurried read. Sized large for a broad audience; cap lines at 65-75ch.
+- **Label** (500, `0.8125rem`, tracking 0.16em): Buttons, kickers, metadata.
 
 ### Named Rules
-**The Printed-Page Rule.** Body type is set for sustained, comfortable reading: 17px, line-height 1.65, lines capped at 65-75ch. If it reads like dense app UI, it is wrong.
+**The Printed-Page Rule.** Body type is set for sustained reading: 17px, line-height 1.65, lines capped at 65-75ch.
 
-**The Three-Tracking Rule.** Only three tracking values exist for uppercase labels: `label` (0.16em), `kicker` (0.22em), `monogram` (0.28em). No arbitrary tracking in markup.
+**The Three-Tracking Rule.** Only three tracking values for uppercase labels: `label` (0.16em), `kicker` (0.22em), `monogram` (0.3em).
 
-## 4. Elevation
+**The Kicker-as-Voice Rule.** The brochure's labelled-section device ("THE PROPERTY", "THE CONCEPT") is used deliberately and sparingly via the `Kicker` component — it is brand voice, not a reflex above every block.
 
-Choreographed motion, calm surfaces. The system is flat and warm at rest; radius is zero, so surfaces are separated by tonal shifts (cream vs. paper vs. sand) rather than shadows. Depth and life come from gentle, orchestrated entrances and scroll-driven reveals on exponential ease-out curves (the `motion` library is available), never from heavy drop-shadows, bounce, or elastic. All motion respects `prefers-reduced-motion`.
+## 4. Elevation & Motion
+
+Choreographed motion, calm surfaces. The system is flat at rest; radius stays small and consistent — 4px on controls, 6px on panels and imagery, only full-bleed bands edge-to-edge — so surfaces separate by tonal shifts (cream → paper → pale-sage → sage → emerald) rather than shadows. Life comes from gentle, orchestrated entrances and scroll-driven reveals on exponential ease-out curves (the `motion` library), site-wide smooth scrolling (`lenis`), a top reading-progress bar, a back-to-top control, the amenities stacking-cards, and embla-driven carousels. All motion honors `prefers-reduced-motion` (Lenis is disabled; reveals crossfade in place).
 
 ### Named Rules
-**The Tonal-Layer Rule.** Separate surfaces with warm tone steps (cream → paper → sand), not shadows. A shadow appears only as a genuine response to state (an open menu, a lifted sheet), never as default decoration.
+**The Tonal-Layer Rule.** Separate surfaces with warm tone steps, not shadows. A shadow appears only as a real response to state (an open menu, the concierge badge), never as default decoration.
 
-**The Gentle Arrival Rule.** Elements ease in; they never bounce, snap, or slide aggressively. Motion is choreography, not decoration, and must degrade to static for reduced-motion visitors.
+**The Gentle Arrival Rule.** Elements ease in; they never bounce, snap, or slide aggressively.
 
 ## 5. Components
 
-Built on shadcn (base-ui primitives, `class-variance-authority` variants). Components consume semantic tokens only; restyle by retuning tokens, not by hardcoding colors.
+Built on shadcn (base-ui primitives, `class-variance-authority`). Components consume semantic tokens only; restyle by retuning tokens.
 
-### Buttons
-- **Shape:** Frameless, sharp (`rounded-none`, 0px). Uppercase label type, tracking 0.16em, semibold, size-default height 2.5rem / px-6.
-- **Primary (`default`):** Terracotta surface (`bg-primary`) with cream text (`text-primary-foreground`); hover drops to `bg-primary/80`.
-- **Secondary:** Sand surface (`bg-secondary`) with ink text; hover `bg-secondary/80`.
-- **Outline:** Transparent on a `border-border` stroke; hover fills with warm-stone `bg-muted`.
-- **Ghost:** No surface at rest; hover fills `bg-muted`.
-- **Link:** Terracotta text, underline offset 4.
-- **Focus:** `border-ring` plus a terracotta `ring/30` halo. Active state nudges `translate-y-px`.
+### Buttons & CTAs
+- **Shape:** Softly rounded (`rounded-sm`, 4px). Uppercase `label` type, tracking 0.16em, height 3rem / px-7. The shared `CtaLink` carries the variants: `solid` (emerald), `outline` (light), `outlineLight` (for dark surfaces), and `link` / `linkLight`.
+- **Primary (`solid`):** Emerald surface with cream text; hover `bg-primary/90`.
+- **Focus:** terracotta-free — emerald `ring` halo. Active nudges `translate-y-px`.
 
 ### Navigation
-- **Style:** Sticky header on cream (`bg-background`) over a hairline `border-border/60`, with a thin promotional bar above. Nav items are uppercase `label` type at `text-foreground/70`, resolving to full `text-foreground` on hover. Mega-menu panels open on `popover`/paper surfaces.
-- **Mobile:** A `Sheet` drawer (3/4 width) with `details`-based disclosure groups; large 44px tap targets throughout.
+- **Style:** Sticky, translucent-cream header (`bg-background/85` + backdrop blur) over a hairline border, with a thin emerald promotional bar above. **Left/right layout:** the wordmark sits alone on the left; the links (Home · About · Financing · Blog) and the `Book a viewing` CTA are grouped on the right. Links are compact uppercase (12px); the active page carries a gold underline. The row is kept low (h-14 / h-16).
+- **Financing mega-menu:** a **full-width** (edge-to-edge) panel on a paper surface with content aligned to `main-container` — a bordered intro column plus the two categories (*Affordability Calculators*, *Bank Partners & Loans*) with one-line descriptions. Opens on hover, toggles on click, closes on Escape / outside-click / navigation; animated with `motion`.
+- **Mobile:** A `Sheet` drawer with `details` disclosure groups; 44px tap targets.
 
-### Inputs / Fields
-- **Style:** `border-input` stroke on `background`, sharp corners, comfortable height.
-- **Focus:** terracotta `ring` halo and `border-ring`, matching buttons.
-- **Error:** `aria-invalid` triggers a `destructive` border and ring.
+### Footer
+A **sticky reveal** footer (`sticky bottom-0 z-0`, content above it at `z-10`): the page scrolls up to unveil a deep-emerald footer with a gold wordmark, real contact, and link columns.
 
 ### Signature: The Inquiry CTA
-The whole site exists to drive inquiries, so the primary CTA is the signature component. It must be reachable from anywhere on the page, read unmistakably as the warm next step, and never compete with a second terracotta element on the same screen.
+The whole site exists to drive viewing inquiries, so the primary CTA ("Book a viewing", emerald) is the signature component — reachable from the header, hero, every closing band, and the footer, and never competing with a second emerald element on the same screen.
 
 ## 6. Do's and Don'ts
 
 ### Do:
-- **Do** lead with warmth, photography, and space; let tonal cream/sand layers carry structure.
-- **Do** reserve terracotta (`primary`) for inquiry actions, links, and focus, on under 10% of any screen.
-- **Do** set body type at 17px with line-height 1.65 and 65-75ch line length for a broad, age-spanning audience.
-- **Do** keep a low-friction way to inquire within reach from anywhere on the page.
-- **Do** restyle by retuning the shadcn semantic tokens, and keep `accent` a neutral hover wash.
-- **Do** ease motion in gently on exponential curves and honor `prefers-reduced-motion`.
+- **Do** lead with warmth, photography, and material; let tonal cream → sage → emerald layers carry structure.
+- **Do** reserve emerald (`primary`) for inquiry actions, links, and focus.
+- **Do** use gold as a rare jewel accent, brightest on dark sage/emerald surfaces.
+- **Do** set body type at 17px / lh 1.65 / 65-75ch.
+- **Do** ease motion in gently and honor `prefers-reduced-motion`.
 
 ### Don't:
-- **Don't** look like generic SaaS / proptech: no gradient heroes, geometric-sans-on-gradient, friendly-app voice, or hero-metric templates.
-- **Don't** adopt listings-portal grammar: no filter rails, repeated card grids, price tags everywhere, or clutter. This site is a feeling, not a database.
-- **Don't** flex luxury: no gold-on-black, no oversized "INVEST NOW" CTAs, no gradient text, no opulent excess.
-- **Don't** go corporate sterile: no stock-photo handshakes, no navy-and-gray, no lifeless enterprise template feel.
-- **Don't** use pure `#000` or `#fff`, side-stripe accent borders, gradient text, or decorative glassmorphism.
-- **Don't** repaint shadcn's `accent` token terracotta; it is the neutral hover wash, not the brand voice.
+- **Don't** look like generic SaaS / proptech, a listings portal, luxury-flex, or corporate-sterile.
+- **Don't** put gold body text on cream (low contrast) or gold buttons on black (luxury-flex).
+- **Don't** use pure `#000`/`#fff`, side-stripe accent borders, gradient text, or decorative glassmorphism.
+- **Don't** repaint shadcn's `accent`; it is the neutral sage-stone hover wash.
+- **Don't** invent facts, prices, or contact details — the brochure (`/public/brochure.pdf`) and `lib/site.ts` are the source of truth.
